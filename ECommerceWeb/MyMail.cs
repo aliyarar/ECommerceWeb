@@ -31,7 +31,7 @@ namespace ECommerceWeb
             SmtpClient client = new SmtpClient()
             {
                 Port = 587,
-                Host = "smtp-mail.yourmail.com",
+                Host = "smtp-mail.yourmailservice.com",
                 EnableSsl = true
             };
             client.Credentials = new System.Net.NetworkCredential("yourmail@yourmail.com", password);
