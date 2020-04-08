@@ -8,7 +8,7 @@ namespace ECommerceWeb
 {
     public class MyMail
     {
-        private static string password = "Atakoy34";
+        private static string password = "yourpassword";
         public string ToMail { get; private set; }
         public string Subject { get; private set; }
         public string Body { get; private set; }
@@ -22,7 +22,7 @@ namespace ECommerceWeb
         {
             MailMessage mail = new MailMessage()
             {
-                From = new MailAddress("a.yrr@outlook.com", "Ali YARAR - Softwareentwickler")
+                From = new MailAddress("yourmail@yourmail.com", "Ali YARAR - Softwareentwickler")
             };
             mail.To.Add(this.ToMail);
             mail.Subject = this.Subject;
@@ -31,10 +31,10 @@ namespace ECommerceWeb
             SmtpClient client = new SmtpClient()
             {
                 Port = 587,
-                Host = "smtp-mail.outlook.com",
+                Host = "smtp-mail.yourmail.com",
                 EnableSsl = true
             };
-            client.Credentials = new System.Net.NetworkCredential("a.yrr@outlook.com", password);
+            client.Credentials = new System.Net.NetworkCredential("yourmail@yourmail.com", password);
 
             client.Send(mail);
         }
